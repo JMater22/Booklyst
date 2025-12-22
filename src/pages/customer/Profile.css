@@ -1,0 +1,86 @@
+.profile-content {
+  --background: var(--booklyst-background);
+}
+
+.profile-container {
+  min-height: 100%;
+  padding-bottom: 20px;
+}
+
+.profile-header {
+  background: white;
+  padding: 32px 20px;
+  text-align: center;
+  margin-bottom: 16px;
+}
+
+.profile-avatar {
+  width: 100px;
+  height: 100px;
+  margin: 0 auto 16px auto;
+}
+
+.avatar-placeholder {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--booklyst-purple);
+  color: white;
+  font-size: 40px;
+  font-weight: 700;
+}
+
+.profile-header h2 {
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--booklyst-text-primary);
+  margin: 0 0 8px 0;
+}
+
+.profile-header .text-secondary {
+  font-size: 14px;
+  margin: 4px 0;
+}
+
+.edit-profile-btn {
+  margin-top: 16px;
+  --border-radius: var(--booklyst-button-radius);
+}
+
+.profile-menu {
+  background: white;
+  margin-bottom: 16px;
+}
+
+.profile-menu ion-item {
+  --padding-start: 20px;
+  --inner-padding-end: 20px;
+}
+
+.profile-menu ion-icon {
+  font-size: 24px;
+  margin-right: 16px;
+  color: var(--booklyst-purple);
+}
+
+.profile-logout {
+  padding: 0 20px;
+  margin: 32px 0;
+}
+
+.profile-logout ion-button {
+  --border-radius: var(--booklyst-button-radius);
+  height: 48px;
+  font-weight: 600;
+}
+
+.profile-footer {
+  text-align: center;
+  padding: 20px;
+}
+
+.profile-footer .text-secondary {
+  font-size: 12px;
+}

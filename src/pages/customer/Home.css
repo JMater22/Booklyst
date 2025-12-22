@@ -1,0 +1,143 @@
+.home-content {
+  --background: var(--booklyst-background);
+}
+
+.home-container {
+  padding-bottom: 20px;
+}
+
+.home-search {
+  padding: 16px 16px 8px 16px;
+  background: white;
+}
+
+.home-searchbar {
+  --background: var(--booklyst-background);
+  --border-radius: var(--booklyst-button-radius);
+  --box-shadow: none;
+  padding: 0;
+}
+
+.home-categories {
+  padding: 8px 16px 16px 16px;
+  background: white;
+  margin-bottom: 16px;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.category-pills {
+  display: flex;
+  gap: 8px;
+  flex-wrap: nowrap;
+  padding-bottom: 4px;
+}
+
+.category-chip {
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+  white-space: nowrap;
+}
+
+.category-chip.active {
+  font-weight: 700;
+}
+
+.home-section {
+  margin-bottom: 24px;
+}
+
+.section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 16px 12px 16px;
+}
+
+.section-header h2 {
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--booklyst-text-primary);
+  margin: 0;
+}
+
+.venue-count {
+  font-size: 14px;
+  color: var(--booklyst-text-secondary);
+  font-weight: 500;
+}
+
+.featured-carousel {
+  padding: 0 16px 32px 16px;
+}
+
+.featured-carousel .swiper-pagination {
+  bottom: 8px;
+}
+
+.featured-carousel .swiper-pagination-bullet {
+  background: var(--booklyst-purple);
+  opacity: 0.3;
+}
+
+.featured-carousel .swiper-pagination-bullet-active {
+  opacity: 1;
+}
+
+.venues-grid {
+  padding: 0 16px;
+}
+
+.empty-state {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.empty-state p {
+  font-size: 16px;
+  color: var(--booklyst-text-secondary);
+  margin-bottom: 16px;
+}
+
+/* Scrollbar styling for category pills */
+.home-categories::-webkit-scrollbar {
+  height: 4px;
+}
+
+.home-categories::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.home-categories::-webkit-scrollbar-thumb {
+  background: var(--ion-color-medium);
+  border-radius: 2px;
+}
+
+.home-categories::-webkit-scrollbar-thumb:hover {
+  background: var(--ion-color-medium-shade);
+}
+
+/* Responsive adjustments */
+@media (min-width: 768px) {
+  .home-container {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .venues-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .venues-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}

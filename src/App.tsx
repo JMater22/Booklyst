@@ -25,6 +25,8 @@ import './theme/global.css';
 /* Pages */
 import Login from './pages/auth/Login';
 import Register from './pages/auth/Register';
+import Home from './pages/customer/Home';
+import Profile from './pages/customer/Profile';
 
 setupIonicReact();
 
@@ -37,12 +39,8 @@ const App: React.FC = () => (
         </Route>
         <Route exact path="/login" component={Login} />
         <Route exact path="/register" component={Register} />
-        <Route exact path="/home">
-          <div style={{ padding: '20px', textAlign: 'center' }}>
-            <h1>Welcome to Booklyst</h1>
-            <p>Customer Home - Coming Soon!</p>
-          </div>
-        </Route>
+        <Route exact path="/home" component={Home} />
+        <Route exact path="/profile" component={Profile} />
         <Route exact path="/owner/dashboard">
           <div style={{ padding: '20px', textAlign: 'center' }}>
             <h1>Welcome to Booklyst</h1>

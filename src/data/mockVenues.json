@@ -19,11 +19,11 @@
       "max": 30000
     },
     "images": [
-      "/assets/venues/tessies-1.jpg",
-      "/assets/venues/tessies-2.jpg",
-      "/assets/venues/tessies-3.jpg"
+      "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=800&h=600&fit=crop",
+      "https://images.unsplash.com/photo-1552566626-52f8b828add9?w=800&h=600&fit=crop",
+      "https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=800&h=600&fit=crop"
     ],
-    "coverImage": "/assets/venues/tessies-cover.jpg",
+    "coverImage": "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=800&h=600&fit=crop",
     "amenities": ["wifi", "parking", "ac", "sound_system", "kitchen"],
     "description": "Perfect venue for intimate gatherings and birthday celebrations. Tessie's Grill offers a cozy atmosphere with delicious Filipino cuisine. Our spacious dining area can accommodate up to 50 guests comfortably.",
     "isFeatured": true,
@@ -52,12 +52,12 @@
       "max": 60000
     },
     "images": [
-      "/assets/venues/bella-1.jpg",
-      "/assets/venues/bella-2.jpg",
-      "/assets/venues/bella-3.jpg",
-      "/assets/venues/bella-4.jpg"
+      "https://images.unsplash.com/photo-1519167758481-83f29da8c3f8?w=800&h=600&fit=crop",
+      "https://images.unsplash.com/photo-1464366400600-7168b8af9bc3?w=800&h=600&fit=crop",
+      "https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=800&h=600&fit=crop",
+      "https://images.unsplash.com/photo-1511578314322-379afb476865?w=800&h=600&fit=crop"
     ],
-    "coverImage": "/assets/venues/bella-cover.jpg",
+    "coverImage": "https://images.unsplash.com/photo-1519167758481-83f29da8c3f8?w=800&h=600&fit=crop",
     "amenities": ["wifi", "parking", "ac", "stage", "projector", "sound_system", "led_lights"],
     "description": "Elegant hall perfect for weddings, corporate events, and large celebrations. The Bella Plaza features modern amenities and beautiful architecture that will make your event memorable.",
     "isFeatured": false,
@@ -86,10 +86,10 @@
       "max": 45000
     },
     "images": [
-      "/assets/venues/garden-1.jpg",
-      "/assets/venues/garden-2.jpg"
+      "https://images.unsplash.com/photo-1470229722913-7c0e2dbbafd3?w=800&h=600&fit=crop",
+      "https://images.unsplash.com/photo-1600334089648-b0d9d3028eb2?w=800&h=600&fit=crop"
     ],
-    "coverImage": "/assets/venues/garden-cover.jpg",
+    "coverImage": "https://images.unsplash.com/photo-1470229722913-7c0e2dbbafd3?w=800&h=600&fit=crop",
     "amenities": ["parking", "outdoor_space", "gazebo", "sound_system", "restrooms"],
     "description": "Beautiful outdoor garden venue perfect for intimate weddings and nature-themed events. Our lush gardens provide a picturesque backdrop for your special day.",
     "isFeatured": true,
@@ -118,11 +118,11 @@
       "max": 150000
     },
     "images": [
-      "/assets/venues/ballroom-1.jpg",
-      "/assets/venues/ballroom-2.jpg",
-      "/assets/venues/ballroom-3.jpg"
+      "https://images.unsplash.com/photo-1464047736614-af63643285bf?w=800&h=600&fit=crop",
+      "https://images.unsplash.com/photo-1492684223066-81342ee5ff30?w=800&h=600&fit=crop",
+      "https://images.unsplash.com/photo-1478146896981-b80fe463b330?w=800&h=600&fit=crop"
     ],
-    "coverImage": "/assets/venues/ballroom-cover.jpg",
+    "coverImage": "https://images.unsplash.com/photo-1464047736614-af63643285bf?w=800&h=600&fit=crop",
     "amenities": ["wifi", "parking", "ac", "stage", "projector", "sound_system", "led_lights", "bridal_suite", "valet"],
     "description": "Luxurious grand ballroom perfect for large weddings, galas, and corporate events. Features elegant chandeliers, state-of-the-art sound and lighting systems.",
     "isFeatured": true,
@@ -151,10 +151,10 @@
       "max": 35000
     },
     "images": [
-      "/assets/venues/conference-1.jpg",
-      "/assets/venues/conference-2.jpg"
+      "https://images.unsplash.com/photo-1505373877841-8d25f7d46678?w=800&h=600&fit=crop",
+      "https://images.unsplash.com/photo-1431540015161-0bf868a2d407?w=800&h=600&fit=crop"
     ],
-    "coverImage": "/assets/venues/conference-cover.jpg",
+    "coverImage": "https://images.unsplash.com/photo-1505373877841-8d25f7d46678?w=800&h=600&fit=crop",
     "amenities": ["wifi", "parking", "ac", "projector", "whiteboard", "video_conferencing", "catering_area"],
     "description": "Modern conference center ideal for corporate meetings, seminars, and training sessions. Equipped with the latest technology and professional amenities.",
     "isFeatured": false,

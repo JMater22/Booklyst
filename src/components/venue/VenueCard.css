@@ -1,0 +1,162 @@
+.venue-card {
+  margin: 0 0 16px 0;
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s;
+  border-radius: var(--booklyst-card-radius);
+  box-shadow: 0 2px 8px rgba(124, 58, 237, 0.08);
+}
+
+.venue-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 16px rgba(124, 58, 237, 0.15);
+}
+
+.venue-card-image-wrapper {
+  position: relative;
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
+}
+
+.venue-card-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.venue-card-favorite {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  font-size: 24px;
+  color: white;
+  background: rgba(0, 0, 0, 0.5);
+  border-radius: 50%;
+  padding: 8px;
+  cursor: pointer;
+  z-index: 10;
+  transition: all 0.2s;
+}
+
+.venue-card-favorite:hover {
+  transform: scale(1.1);
+  background: rgba(0, 0, 0, 0.7);
+}
+
+.venue-card-favorite.active {
+  color: var(--ion-color-danger);
+  background: rgba(255, 255, 255, 0.9);
+}
+
+.venue-card-featured-badge {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  font-size: 12px;
+  font-weight: 600;
+  height: 24px;
+}
+
+.venue-card-content {
+  padding: 16px;
+}
+
+.venue-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 8px;
+  gap: 8px;
+}
+
+.venue-card-title {
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--booklyst-text-primary);
+  margin: 0;
+  flex: 1;
+}
+
+.venue-card-category {
+  font-size: 11px;
+  height: 24px;
+  font-weight: 500;
+}
+
+.venue-card-location {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  color: var(--booklyst-text-secondary);
+  font-size: 14px;
+  margin-bottom: 12px;
+}
+
+.venue-card-location ion-icon {
+  font-size: 16px;
+}
+
+.venue-card-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+  gap: 12px;
+}
+
+.venue-card-rating {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.venue-card-rating ion-icon {
+  font-size: 16px;
+}
+
+.venue-card-rating .text-secondary {
+  font-weight: 400;
+  font-size: 13px;
+}
+
+.venue-card-capacity {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  color: var(--booklyst-text-secondary);
+  font-size: 13px;
+}
+
+.venue-card-capacity ion-icon {
+  font-size: 16px;
+}
+
+.venue-card-price {
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--booklyst-purple);
+  text-align: right;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .venue-card-image-wrapper {
+    height: 180px;
+  }
+
+  .venue-card-title {
+    font-size: 16px;
+  }
+
+  .venue-card-info {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+
+  .venue-card-price {
+    text-align: left;
+  }
+}
