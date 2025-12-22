@@ -1,6 +1,6 @@
 import React from 'react';
 import { IonCard, IonCardContent, IonIcon, IonChip } from '@ionic/react';
-import { locationOutline, peopleOutline, starOutline, star, heartOutline, heart } from 'ionicons/icons';
+import { locationOutline, peopleOutline, star, heartOutline, heart } from 'ionicons/icons';
 import { Venue } from '../../types/venue.types';
 import { venueService } from '../../services/venueService';
 import './VenueCard.css';
@@ -13,6 +13,7 @@ interface VenueCardProps {
 
 const VenueCard: React.FC<VenueCardProps> = ({ venue, onClick, onFavoriteToggle }) => {
   const [isFavorite, setIsFavorite] = React.useState(venueService.isFavorite(venue.id));
+  const [imageError, setImageError] = React.useState(false);
 
   const handleFavoriteClick = (e: React.MouseEvent) => {
     e.stopPropagation();
@@ -25,6 +26,10 @@ const VenueCard: React.FC<VenueCardProps> = ({ venue, onClick, onFavoriteToggle 
 
     setIsFavorite(!isFavorite);
     onFavoriteToggle?.();
+  };
+
+  const handleImageError = () => {
+    setImageError(true);
   };
 
   const formatPrice = (min: number, max: number) => {
@@ -45,11 +50,18 @@ const VenueCard: React.FC<VenueCardProps> = ({ venue, onClick, onFavoriteToggle 
   return (
     <IonCard className="venue-card" onClick={onClick}>
       <div className="venue-card-image-wrapper">
-        <img
-          src={venue.coverImage || venue.images[0] || '/assets/placeholder-venue.jpg'}
-          alt={venue.name}
-          className="venue-card-image"
-        />
+        {!imageError ? (
+          <img
+            src={venue.coverImage || venue.images[0]}
+            alt={venue.name}
+            className="venue-card-image"
+            onError={handleImageError}
+          />
+        ) : (
+          <div className="venue-card-image-placeholder">
+            <div className="placeholder-text">{venue.name.charAt(0)}</div>
+          </div>
+        )}
         <IonIcon
           icon={isFavorite ? heart : heartOutline}
           className={`venue-card-favorite ${isFavorite ? 'active' : ''}`}
