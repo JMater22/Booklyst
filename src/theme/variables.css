@@ -1,0 +1,100 @@
+/* Booklyst Design System - Purple Theme */
+
+:root {
+  /* Primary Colors - Purple */
+  --ion-color-primary: #7C3AED;
+  --ion-color-primary-rgb: 124, 58, 237;
+  --ion-color-primary-contrast: #ffffff;
+  --ion-color-primary-contrast-rgb: 255, 255, 255;
+  --ion-color-primary-shade: #6D33D1;
+  --ion-color-primary-tint: #8951EF;
+
+  /* Secondary - Light Purple */
+  --ion-color-secondary: #A78BFA;
+  --ion-color-secondary-rgb: 167, 139, 250;
+  --ion-color-secondary-contrast: #ffffff;
+  --ion-color-secondary-contrast-rgb: 255, 255, 255;
+  --ion-color-secondary-shade: #927ADC;
+  --ion-color-secondary-tint: #B09CFB;
+
+  /* Tertiary - Accent Orange (for ratings) */
+  --ion-color-tertiary: #F97316;
+  --ion-color-tertiary-rgb: 249, 115, 22;
+  --ion-color-tertiary-contrast: #ffffff;
+  --ion-color-tertiary-contrast-rgb: 255, 255, 255;
+  --ion-color-tertiary-shade: #DB6514;
+  --ion-color-tertiary-tint: #FA832D;
+
+  /* Success */
+  --ion-color-success: #10B981;
+  --ion-color-success-rgb: 16, 185, 129;
+  --ion-color-success-contrast: #ffffff;
+  --ion-color-success-contrast-rgb: 255, 255, 255;
+  --ion-color-success-shade: #0EA372;
+  --ion-color-success-tint: #28C494;
+
+  /* Warning */
+  --ion-color-warning: #FCD34D;
+  --ion-color-warning-rgb: 252, 211, 77;
+  --ion-color-warning-contrast: #000000;
+  --ion-color-warning-contrast-rgb: 0, 0, 0;
+  --ion-color-warning-shade: #DEBA44;
+  --ion-color-warning-tint: #FCDA5F;
+
+  /* Danger */
+  --ion-color-danger: #EF4444;
+  --ion-color-danger-rgb: 239, 68, 68;
+  --ion-color-danger-contrast: #ffffff;
+  --ion-color-danger-contrast-rgb: 255, 255, 255;
+  --ion-color-danger-shade: #D23C3C;
+  --ion-color-danger-tint: #F15757;
+
+  /* Light - Background */
+  --ion-color-light: #F3F4F6;
+  --ion-color-light-rgb: 243, 244, 246;
+  --ion-color-light-contrast: #000000;
+  --ion-color-light-contrast-rgb: 0, 0, 0;
+  --ion-color-light-shade: #D6D7D9;
+  --ion-color-light-tint: #F4F5F7;
+
+  /* Medium - Gray */
+  --ion-color-medium: #6B7280;
+  --ion-color-medium-rgb: 107, 114, 128;
+  --ion-color-medium-contrast: #ffffff;
+  --ion-color-medium-contrast-rgb: 255, 255, 255;
+  --ion-color-medium-shade: #5E6470;
+  --ion-color-medium-tint: #7A808E;
+
+  /* Dark - Text */
+  --ion-color-dark: #111827;
+  --ion-color-dark-rgb: 17, 24, 39;
+  --ion-color-dark-contrast: #ffffff;
+  --ion-color-dark-contrast-rgb: 255, 255, 255;
+  --ion-color-dark-shade: #0F1522;
+  --ion-color-dark-tint: #29303D;
+
+  /* Background & Text */
+  --ion-background-color: #ffffff;
+  --ion-background-color-rgb: 255, 255, 255;
+  --ion-text-color: #111827;
+  --ion-text-color-rgb: 17, 24, 39;
+  --ion-color-step-50: #F9FAFB;
+  --ion-color-step-100: #F3F4F6;
+  --ion-color-step-150: #E5E7EB;
+  --ion-color-step-200: #D1D5DB;
+  --ion-color-step-250: #9CA3AF;
+  --ion-color-step-300: #6B7280;
+  --ion-color-step-350: #4B5563;
+  --ion-color-step-400: #374151;
+  --ion-color-step-450: #1F2937;
+  --ion-color-step-500: #111827;
+
+  /* Custom Design Tokens */
+  --booklyst-purple: #7C3AED;
+  --booklyst-orange: #F97316;
+  --booklyst-background: #F3F4F6;
+  --booklyst-text-primary: #111827;
+  --booklyst-text-secondary: #6B7280;
+  --booklyst-card-radius: 12px;
+  --booklyst-button-radius: 24px;
+}
