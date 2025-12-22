@@ -52,12 +52,12 @@
       "max": 60000
     },
     "images": [
-      "https://images.unsplash.com/photo-1519167758481-83f29da8c3f8?w=800&h=600&fit=crop&auto=format",
-      "https://images.unsplash.com/photo-1464366400600-7168b8af9bc3?w=800&h=600&fit=crop&auto=format",
-      "https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=800&h=600&fit=crop&auto=format",
-      "https://images.unsplash.com/photo-1511578314322-379afb476865?w=800&h=600&fit=crop&auto=format"
+      "https://picsum.photos/800/600?random=2",
+      "https://picsum.photos/800/600?random=3",
+      "https://picsum.photos/800/600?random=4",
+      "https://picsum.photos/800/600?random=5"
     ],
-    "coverImage": "https://images.unsplash.com/photo-1519167758481-83f29da8c3f8?w=800&h=600&fit=crop&auto=format",
+    "coverImage": "https://picsum.photos/800/600?random=2",
     "amenities": ["wifi", "parking", "ac", "stage", "projector", "sound_system", "led_lights"],
     "description": "Elegant hall perfect for weddings, corporate events, and large celebrations. The Bella Plaza features modern amenities and beautiful architecture that will make your event memorable.",
     "isFeatured": false,
