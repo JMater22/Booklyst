@@ -1,0 +1,180 @@
+.bookings-content {
+  --background: var(--booklyst-background);
+}
+
+.bookings-container {
+  padding: 16px;
+  min-height: 100%;
+}
+
+.bookings-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.booking-card {
+  margin: 0;
+  border-radius: var(--booklyst-card-radius);
+  box-shadow: 0 2px 8px rgba(124, 58, 237, 0.08);
+  transition: all 0.2s;
+}
+
+.booking-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(124, 58, 237, 0.12);
+}
+
+.booking-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.booking-status-badge ion-chip {
+  font-weight: 600;
+  font-size: 12px;
+}
+
+.booking-reference {
+  font-size: 12px;
+  color: var(--booklyst-text-secondary);
+  font-weight: 500;
+}
+
+.booking-venue-info {
+  margin-bottom: 16px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid #f3f4f6;
+}
+
+.booking-venue-info h3 {
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--booklyst-text-primary);
+  margin: 0 0 8px 0;
+}
+
+.venue-name {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  color: var(--booklyst-text-secondary);
+  font-size: 14px;
+}
+
+.venue-name ion-icon {
+  font-size: 16px;
+}
+
+.booking-details-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+  margin-bottom: 16px;
+}
+
+.detail-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+.detail-item ion-icon {
+  font-size: 22px;
+  margin-top: 2px;
+  flex-shrink: 0;
+}
+
+.detail-label {
+  font-size: 11px;
+  color: var(--booklyst-text-secondary);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 4px;
+}
+
+.detail-value {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--booklyst-text-primary);
+}
+
+.booking-actions {
+  display: flex;
+  gap: 8px;
+  padding-top: 12px;
+  border-top: 1px solid #f3f4f6;
+}
+
+.booking-actions ion-button {
+  --border-radius: 8px;
+  font-weight: 600;
+  flex: 1;
+}
+
+.empty-state {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 80px 20px;
+  text-align: center;
+  min-height: calc(100vh - 200px);
+}
+
+.empty-icon {
+  font-size: 80px;
+  color: var(--booklyst-text-secondary);
+  opacity: 0.5;
+  margin-bottom: 24px;
+}
+
+.empty-state h3 {
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--booklyst-text-primary);
+  margin: 0 0 8px 0;
+}
+
+.empty-state p {
+  font-size: 14px;
+  color: var(--booklyst-text-secondary);
+  margin: 0 0 24px 0;
+}
+
+.browse-button {
+  --background: var(--booklyst-purple);
+  --border-radius: var(--booklyst-button-radius);
+  height: 48px;
+  font-weight: 600;
+  max-width: 300px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 576px) {
+  .booking-details-grid {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .booking-actions {
+    flex-direction: column;
+  }
+
+  .booking-actions ion-button {
+    width: 100%;
+  }
+}
+
+@media (min-width: 768px) {
+  .bookings-container {
+    max-width: 900px;
+    margin: 0 auto;
+  }
+
+  .booking-details-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
