@@ -1,0 +1,8 @@
+{
+  "name": "booklyst",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "react",
+  "id": "booklyst-app"
+}
