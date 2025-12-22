@@ -1,0 +1,48 @@
+.register-content {
+  --background: var(--booklyst-background);
+}
+
+.register-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 100%;
+  padding: 20px;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.register-header {
+  text-align: center;
+  margin-bottom: 24px;
+}
+
+.register-header h1 {
+  font-size: 28px;
+  font-weight: 700;
+  color: var(--booklyst-text-primary);
+  margin-bottom: 8px;
+}
+
+.register-form {
+  background: white;
+  border-radius: var(--booklyst-card-radius);
+  padding: 24px;
+  box-shadow: 0 2px 12px rgba(124, 58, 237, 0.1);
+}
+
+.register-button {
+  --background: var(--booklyst-purple);
+  --border-radius: var(--booklyst-button-radius);
+  height: 48px;
+  font-weight: 600;
+  margin: 8px 0 16px 0;
+}
+
+.login-link {
+  text-align: center;
+  margin-top: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

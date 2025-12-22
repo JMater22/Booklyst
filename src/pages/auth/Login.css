@@ -1,0 +1,104 @@
+.login-content {
+  --background: var(--booklyst-background);
+}
+
+.login-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 100%;
+  padding: 20px;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.login-header {
+  text-align: center;
+  margin-bottom: 32px;
+}
+
+.login-header h1 {
+  font-size: 28px;
+  font-weight: 700;
+  color: var(--booklyst-text-primary);
+  margin-bottom: 8px;
+}
+
+.login-form {
+  background: white;
+  border-radius: var(--booklyst-card-radius);
+  padding: 24px;
+  box-shadow: 0 2px 12px rgba(124, 58, 237, 0.1);
+}
+
+.input-item {
+  --background: #F9FAFB;
+  --border-radius: 12px;
+  margin-bottom: 16px;
+  --padding-start: 12px;
+  --inner-padding-end: 12px;
+}
+
+.remember-forgot {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 16px 0 24px 0;
+  font-size: 14px;
+}
+
+.checkbox-item {
+  --padding-start: 0;
+  --inner-padding-end: 0;
+  width: auto;
+}
+
+.forgot-password {
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.login-button {
+  --background: var(--booklyst-purple);
+  --border-radius: var(--booklyst-button-radius);
+  height: 48px;
+  font-weight: 600;
+  margin: 0 0 16px 0;
+}
+
+.divider {
+  text-align: center;
+  margin: 24px 0;
+  position: relative;
+}
+
+.divider::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: #E5E7EB;
+}
+
+.divider span {
+  position: relative;
+  background: white;
+  padding: 0 16px;
+  color: var(--booklyst-text-secondary);
+  font-size: 14px;
+}
+
+.test-accounts {
+  margin-top: 32px;
+  text-align: center;
+  padding: 16px;
+  background: #F9FAFB;
+  border-radius: 8px;
+}
+
+.test-accounts p {
+  margin: 4px 0;
+  font-size: 12px;
+}

@@ -22,6 +22,10 @@ import '@ionic/react/css/display.css';
 import './theme/variables.css';
 import './theme/global.css';
 
+/* Pages */
+import Login from './pages/auth/Login';
+import Register from './pages/auth/Register';
+
 setupIonicReact();
 
 const App: React.FC = () => (
@@ -29,12 +33,20 @@ const App: React.FC = () => (
     <IonReactRouter>
       <IonRouterOutlet>
         <Route exact path="/">
-          <Redirect to="/home" />
+          <Redirect to="/login" />
         </Route>
+        <Route exact path="/login" component={Login} />
+        <Route exact path="/register" component={Register} />
         <Route exact path="/home">
           <div style={{ padding: '20px', textAlign: 'center' }}>
             <h1>Welcome to Booklyst</h1>
-            <p>Event Planning & Venue Booking Platform</p>
+            <p>Customer Home - Coming Soon!</p>
+          </div>
+        </Route>
+        <Route exact path="/owner/dashboard">
+          <div style={{ padding: '20px', textAlign: 'center' }}>
+            <h1>Welcome to Booklyst</h1>
+            <p>Owner Dashboard - Coming Soon!</p>
           </div>
         </Route>
       </IonRouterOutlet>
