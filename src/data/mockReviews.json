@@ -1,0 +1,47 @@
+[
+  {
+    "id": "review1",
+    "venueId": "venue1",
+    "customerId": "user1",
+    "customerName": "Juan Dela Cruz",
+    "rating": 4,
+    "reviewText": "Great venue! Staff was very accommodating and the food was delicious. Perfect for intimate gatherings.",
+    "photos": [],
+    "eventType": "birthday",
+    "venueQualityRating": 4,
+    "serviceQualityRating": 5,
+    "valueRating": 4,
+    "cleanlinessRating": 4,
+    "createdAt": "2025-01-15T10:00:00Z"
+  },
+  {
+    "id": "review2",
+    "venueId": "venue2",
+    "customerId": "user1",
+    "customerName": "Pedro Garcia",
+    "rating": 5,
+    "reviewText": "Absolutely stunning venue! The Bella Plaza exceeded our expectations. Our wedding was perfect!",
+    "photos": [],
+    "eventType": "wedding",
+    "venueQualityRating": 5,
+    "serviceQualityRating": 5,
+    "valueRating": 4,
+    "cleanlinessRating": 5,
+    "createdAt": "2025-01-10T10:00:00Z"
+  },
+  {
+    "id": "review3",
+    "venueId": "venue3",
+    "customerId": "user1",
+    "customerName": "Ana Lopez",
+    "rating": 4,
+    "reviewText": "Beautiful garden setting. The only concern was the weather, but they had a backup plan. Highly recommended!",
+    "photos": [],
+    "eventType": "wedding",
+    "venueQualityRating": 5,
+    "serviceQualityRating": 4,
+    "valueRating": 4,
+    "cleanlinessRating": 4,
+    "createdAt": "2025-01-05T10:00:00Z"
+  }
+]

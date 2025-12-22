@@ -1,0 +1,22 @@
+[
+  {
+    "id": "user1",
+    "email": "customer@test.com",
+    "password": "password123",
+    "role": "customer",
+    "name": "Juan Dela Cruz",
+    "phone": "+63 917 123 4567",
+    "profilePic": null,
+    "createdAt": "2025-01-01T10:00:00Z"
+  },
+  {
+    "id": "user2",
+    "email": "owner@test.com",
+    "password": "password123",
+    "role": "owner",
+    "name": "Maria Santos",
+    "phone": "+63 918 765 4321",
+    "profilePic": null,
+    "createdAt": "2024-12-01T10:00:00Z"
+  }
+]

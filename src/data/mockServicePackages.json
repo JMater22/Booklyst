@@ -1,0 +1,92 @@
+[
+  {
+    "id": "pkg1",
+    "venueId": "venue1",
+    "name": "Basic Catering Package",
+    "type": "catering",
+    "description": "Standard buffet menu with Filipino favorites",
+    "pricePerPerson": 500,
+    "pricingUnit": "per_person",
+    "inclusions": ["5 Main Dishes", "2 Desserts", "Unlimited Rice", "Iced Tea"]
+  },
+  {
+    "id": "pkg2",
+    "venueId": "venue1",
+    "name": "Premium Catering Package",
+    "type": "catering",
+    "description": "Deluxe buffet with international cuisine",
+    "pricePerPerson": 800,
+    "pricingUnit": "per_person",
+    "inclusions": ["8 Main Dishes", "3 Desserts", "Unlimited Rice", "Juice & Soda", "Fruit Platter"]
+  },
+  {
+    "id": "pkg3",
+    "venueId": "venue1",
+    "name": "Basic Decoration",
+    "type": "decoration",
+    "description": "Simple and elegant decoration setup",
+    "price": 5000,
+    "pricingUnit": "flat_rate",
+    "inclusions": ["Balloons", "Table Centerpieces", "Entrance Arch", "Backdrop"]
+  },
+  {
+    "id": "pkg4",
+    "venueId": "venue2",
+    "name": "Elegant Wedding Catering",
+    "type": "catering",
+    "description": "Premium wedding banquet package",
+    "pricePerPerson": 1200,
+    "pricingUnit": "per_person",
+    "inclusions": ["10 Course Meal", "Welcome Drinks", "Champagne Toast", "Wedding Cake", "Dessert Bar"]
+  },
+  {
+    "id": "pkg5",
+    "venueId": "venue2",
+    "name": "Grand Wedding Decoration",
+    "type": "decoration",
+    "description": "Luxurious wedding decoration with floral arrangements",
+    "price": 25000,
+    "pricingUnit": "flat_rate",
+    "inclusions": ["Fresh Flowers", "LED Lighting", "Stage Backdrop", "Table Settings", "Entrance Decoration", "Photo Booth"]
+  },
+  {
+    "id": "pkg6",
+    "venueId": "venue2",
+    "name": "Professional Photography",
+    "type": "photography",
+    "description": "Full-day wedding photography coverage",
+    "price": 15000,
+    "pricingUnit": "flat_rate",
+    "inclusions": ["8 Hours Coverage", "2 Photographers", "300+ Edited Photos", "Photo Album", "USB Drive"]
+  },
+  {
+    "id": "pkg7",
+    "venueId": "venue3",
+    "name": "Garden Catering",
+    "type": "catering",
+    "description": "Outdoor buffet perfect for garden events",
+    "pricePerPerson": 650,
+    "pricingUnit": "per_person",
+    "inclusions": ["6 Main Dishes", "2 Appetizers", "Dessert", "Drinks"]
+  },
+  {
+    "id": "pkg8",
+    "venueId": "venue4",
+    "name": "Grand Ballroom Catering",
+    "type": "catering",
+    "description": "Luxurious fine dining experience",
+    "pricePerPerson": 1500,
+    "pricingUnit": "per_person",
+    "inclusions": ["12 Course Meal", "Wine Pairing", "Live Carving Station", "Dessert Buffet"]
+  },
+  {
+    "id": "pkg9",
+    "venueId": "venue5",
+    "name": "Conference Catering",
+    "type": "catering",
+    "description": "Professional meeting catering",
+    "pricePerPerson": 350,
+    "pricingUnit": "per_person",
+    "inclusions": ["Coffee & Tea", "Snacks", "Lunch Box", "Water"]
+  }
+]
