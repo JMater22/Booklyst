@@ -27,6 +27,7 @@ import Login from './pages/auth/Login';
 import Register from './pages/auth/Register';
 import Home from './pages/customer/Home';
 import Profile from './pages/customer/Profile';
+import VenueDetails from './pages/customer/VenueDetails';
 
 setupIonicReact();
 
@@ -41,6 +42,7 @@ const App: React.FC = () => (
         <Route exact path="/register" component={Register} />
         <Route exact path="/home" component={Home} />
         <Route exact path="/profile" component={Profile} />
+        <Route exact path="/venue/:id" component={VenueDetails} />
         <Route exact path="/owner/dashboard">
           <div style={{ padding: '20px', textAlign: 'center' }}>
             <h1>Welcome to Booklyst</h1>
