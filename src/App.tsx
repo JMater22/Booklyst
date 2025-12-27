@@ -30,6 +30,7 @@ import Profile from './pages/customer/Profile';
 import VenueDetails from './pages/customer/VenueDetails';
 import BookingFlow from './pages/customer/BookingFlow';
 import MyBookings from './pages/customer/MyBookings';
+import Favorites from './pages/customer/Favorites';
 
 setupIonicReact();
 
@@ -47,6 +48,7 @@ const App: React.FC = () => (
         <Route exact path="/venue/:id" component={VenueDetails} />
         <Route exact path="/booking/:id" component={BookingFlow} />
         <Route exact path="/bookings" component={MyBookings} />
+        <Route exact path="/favorites" component={Favorites} />
         <Route exact path="/owner/dashboard">
           <div style={{ padding: '20px', textAlign: 'center' }}>
             <h1>Welcome to Booklyst</h1>
