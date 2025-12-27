@@ -31,6 +31,7 @@ import VenueDetails from './pages/customer/VenueDetails';
 import BookingFlow from './pages/customer/BookingFlow';
 import MyBookings from './pages/customer/MyBookings';
 import Favorites from './pages/customer/Favorites';
+import OwnerDashboard from './pages/owner/OwnerDashboard';
 
 setupIonicReact();
 
@@ -49,12 +50,7 @@ const App: React.FC = () => (
         <Route exact path="/booking/:id" component={BookingFlow} />
         <Route exact path="/bookings" component={MyBookings} />
         <Route exact path="/favorites" component={Favorites} />
-        <Route exact path="/owner/dashboard">
-          <div style={{ padding: '20px', textAlign: 'center' }}>
-            <h1>Welcome to Booklyst</h1>
-            <p>Owner Dashboard - Coming Soon!</p>
-          </div>
-        </Route>
+        <Route exact path="/owner/dashboard" component={OwnerDashboard} />
       </IonRouterOutlet>
     </IonReactRouter>
   </IonApp>

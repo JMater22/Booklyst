@@ -1,0 +1,234 @@
+.owner-dashboard-content {
+  --background: var(--booklyst-background);
+}
+
+.dashboard-container {
+  padding: 16px;
+  padding-bottom: 32px;
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+  margin-bottom: 24px;
+}
+
+.stat-card {
+  margin: 0;
+  border-radius: var(--booklyst-card-radius);
+  box-shadow: 0 2px 8px rgba(124, 58, 237, 0.08);
+}
+
+.stat-card ion-card-content {
+  padding: 16px;
+  text-align: center;
+}
+
+.stat-icon-wrapper {
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 12px auto;
+}
+
+.stat-icon-wrapper ion-icon {
+  font-size: 24px;
+}
+
+.stat-value {
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--booklyst-text-primary);
+  margin-bottom: 4px;
+}
+
+.stat-label {
+  font-size: 12px;
+  color: var(--booklyst-text-secondary);
+  font-weight: 500;
+}
+
+.section {
+  margin-bottom: 24px;
+}
+
+.section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.section-title {
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--booklyst-text-primary);
+  margin: 0;
+}
+
+.quick-actions {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 12px;
+}
+
+.action-button {
+  --border-radius: var(--booklyst-button-radius);
+  height: 48px;
+  font-weight: 600;
+}
+
+.venues-list,
+.bookings-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.venue-card-compact {
+  margin: 0;
+  border-radius: var(--booklyst-card-radius);
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.venue-card-compact:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(124, 58, 237, 0.12);
+}
+
+.venue-compact-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.venue-compact-content h3 {
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--booklyst-text-primary);
+  margin: 0 0 4px 0;
+}
+
+.venue-location {
+  font-size: 13px;
+  color: var(--booklyst-text-secondary);
+  margin: 0;
+}
+
+.venue-stats {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--booklyst-purple);
+}
+
+.venue-stats ion-icon {
+  font-size: 18px;
+}
+
+.booking-card-compact {
+  margin: 0;
+  border-radius: var(--booklyst-card-radius);
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.booking-card-compact:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(124, 58, 237, 0.12);
+}
+
+.booking-compact-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.status-chip {
+  font-size: 11px;
+  height: 24px;
+  font-weight: 600;
+  text-transform: capitalize;
+}
+
+.booking-reference {
+  font-size: 12px;
+  color: var(--booklyst-text-secondary);
+  font-weight: 500;
+}
+
+.booking-event-name {
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--booklyst-text-primary);
+  margin: 0 0 4px 0;
+}
+
+.booking-venue-name {
+  font-size: 13px;
+  color: var(--booklyst-text-secondary);
+  margin: 0 0 12px 0;
+}
+
+.booking-compact-details {
+  display: flex;
+  gap: 16px;
+  font-size: 13px;
+  color: var(--booklyst-text-secondary);
+}
+
+.booking-compact-details span {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.booking-compact-details ion-icon {
+  font-size: 16px;
+}
+
+.empty-state-small {
+  text-align: center;
+  padding: 40px 20px;
+  background: white;
+  border-radius: var(--booklyst-card-radius);
+}
+
+.empty-state-small p {
+  font-size: 14px;
+  color: var(--booklyst-text-secondary);
+  margin: 0 0 16px 0;
+}
+
+/* Responsive */
+@media (min-width: 768px) {
+  .dashboard-container {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .stats-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .quick-actions {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .venues-list,
+  .bookings-list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+  }
+}
