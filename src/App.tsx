@@ -32,6 +32,7 @@ import BookingFlow from './pages/customer/BookingFlow';
 import MyBookings from './pages/customer/MyBookings';
 import Favorites from './pages/customer/Favorites';
 import OwnerDashboard from './pages/owner/OwnerDashboard';
+import VenueForm from './pages/owner/VenueForm';
 
 setupIonicReact();
 
@@ -51,6 +52,7 @@ const App: React.FC = () => (
         <Route exact path="/bookings" component={MyBookings} />
         <Route exact path="/favorites" component={Favorites} />
         <Route exact path="/owner/dashboard" component={OwnerDashboard} />
+        <Route exact path="/owner/venues/new" component={VenueForm} />
       </IonRouterOutlet>
     </IonReactRouter>
   </IonApp>

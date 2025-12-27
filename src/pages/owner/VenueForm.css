@@ -1,0 +1,83 @@
+.venue-form-content {
+  --background: var(--booklyst-background);
+}
+
+.venue-form-container {
+  padding: 16px;
+  padding-bottom: 32px;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.form-section {
+  background: white;
+  border-radius: var(--booklyst-card-radius);
+  padding: 20px;
+  margin-bottom: 16px;
+}
+
+.section-title {
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--booklyst-text-primary);
+  margin: 0 0 16px 0;
+}
+
+.form-section ion-item {
+  --background: transparent;
+  --border-radius: 8px;
+  --padding-start: 0;
+  --padding-end: 0;
+  --inner-padding-end: 0;
+  margin-bottom: 16px;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  padding: 0 12px;
+}
+
+.form-section ion-label {
+  font-weight: 600;
+  color: var(--booklyst-text-primary);
+  margin-bottom: 8px;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+.amenities-checkboxes {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 8px;
+}
+
+.amenities-checkboxes ion-item {
+  border: none;
+  margin: 0;
+  padding: 0;
+}
+
+.form-actions {
+  margin-top: 24px;
+}
+
+.submit-button {
+  --background: var(--booklyst-purple);
+  --border-radius: var(--booklyst-button-radius);
+  height: 56px;
+  font-weight: 700;
+  font-size: 16px;
+}
+
+/* Responsive */
+@media (max-width: 576px) {
+  .form-row {
+    grid-template-columns: 1fr;
+  }
+
+  .amenities-checkboxes {
+    grid-template-columns: 1fr;
+  }
+}
