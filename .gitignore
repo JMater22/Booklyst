@@ -3,13 +3,15 @@ node_modules/
 
 # Build outputs
 build/
-dist/
 www/
 
 # Capacitor
-android/
 ios/
 .capacitor/
+
+# Keep android and dist for GitHub Actions builds
+# android/
+# dist/
 
 # Environment variables
 .env

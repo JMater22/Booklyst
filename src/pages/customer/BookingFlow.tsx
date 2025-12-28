@@ -104,7 +104,15 @@ const BookingFlow: React.FC = () => {
   };
 
   const calculatePricing = () => {
-    if (!venue) return { subtotal: 0, serviceFee: 0, total: 0, deposit: 0, balance: 0 };
+    if (!venue) return {
+      subtotal: 0,
+      serviceFee: 0,
+      total: 0,
+      deposit: 0,
+      balance: 0,
+      venuePrice: 0,
+      servicesPricing: [] as { name: string; price: number }[]
+    };
 
     let venuePrice = venue.priceRange.min;
     const selectedServicesList = availableServices.filter(s =>
@@ -188,11 +196,11 @@ const BookingFlow: React.FC = () => {
     setTimeout(() => {
       const pricing = calculatePricing();
 
-      const booking = bookingService.createBooking({
+      bookingService.createBooking({
         customerId: user.id,
         venueId: id,
         eventName: formData.eventName,
-        eventType: formData.eventType,
+        eventType: formData.eventType as 'birthday' | 'wedding' | 'corporate' | 'conference' | 'other',
         eventDate: formData.eventDate,
         startTime: formData.startTime,
         endTime: formData.endTime,
@@ -270,6 +278,7 @@ const BookingFlow: React.FC = () => {
           value={formData.eventDate}
           onIonChange={e => handleInputChange('eventDate', e.detail.value)}
           presentation="date"
+          preferWheel={true}
           min={new Date().toISOString()}
         />
       </IonItem>
@@ -281,6 +290,7 @@ const BookingFlow: React.FC = () => {
             value={formData.startTime}
             onIonChange={e => handleInputChange('startTime', e.detail.value)}
             presentation="time"
+            preferWheel={true}
           />
         </IonItem>
 
@@ -290,6 +300,7 @@ const BookingFlow: React.FC = () => {
             value={formData.endTime}
             onIonChange={e => handleInputChange('endTime', e.detail.value)}
             presentation="time"
+            preferWheel={true}
           />
         </IonItem>
       </div>
@@ -401,9 +412,9 @@ const BookingFlow: React.FC = () => {
             <h3>Pricing Breakdown</h3>
             <div className="pricing-item">
               <span>Venue Rental:</span>
-              <span>₱{pricing.venuePrice?.toLocaleString()}</span>
+              <span>₱{pricing.venuePrice.toLocaleString()}</span>
             </div>
-            {pricing.servicesPricing?.map((service: any, idx: number) => (
+            {pricing.servicesPricing.map((service: any, idx: number) => (
               <div key={idx} className="pricing-item">
                 <span>{service.name}:</span>
                 <span>₱{service.price.toLocaleString()}</span>

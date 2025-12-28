@@ -30,9 +30,12 @@ import Profile from './pages/customer/Profile';
 import VenueDetails from './pages/customer/VenueDetails';
 import BookingFlow from './pages/customer/BookingFlow';
 import MyBookings from './pages/customer/MyBookings';
+import BookingDetails from './pages/customer/BookingDetails';
 import Favorites from './pages/customer/Favorites';
 import OwnerDashboard from './pages/owner/OwnerDashboard';
 import VenueForm from './pages/owner/VenueForm';
+import ManageVenues from './pages/owner/ManageVenues';
+import ServicePackages from './pages/owner/ServicePackages';
 
 setupIonicReact();
 
@@ -50,9 +53,13 @@ const App: React.FC = () => (
         <Route exact path="/venue/:id" component={VenueDetails} />
         <Route exact path="/booking/:id" component={BookingFlow} />
         <Route exact path="/bookings" component={MyBookings} />
+        <Route exact path="/booking-details/:id" component={BookingDetails} />
         <Route exact path="/favorites" component={Favorites} />
         <Route exact path="/owner/dashboard" component={OwnerDashboard} />
+        <Route exact path="/owner/venues" component={ManageVenues} />
         <Route exact path="/owner/venues/new" component={VenueForm} />
+        <Route exact path="/owner/venues/edit/:id" component={VenueForm} />
+        <Route exact path="/owner/venues/:id/packages" component={ServicePackages} />
       </IonRouterOutlet>
     </IonReactRouter>
   </IonApp>

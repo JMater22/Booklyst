@@ -25,12 +25,14 @@ import {
   statsChartOutline,
   checkmarkCircle,
   hourglassOutline,
+  logOutOutline,
 } from 'ionicons/icons';
 import { Venue } from '../../types/venue.types';
 import { Booking } from '../../types/booking.types';
 import { venueService } from '../../services/venueService';
 import { bookingService } from '../../services/bookingService';
 import { authService } from '../../services/authService';
+import OwnerTabBar from '../../components/navigation/OwnerTabBar';
 
 import './OwnerDashboard.css';
 
@@ -113,6 +115,11 @@ const OwnerDashboard: React.FC = () => {
     router.push('/profile');
   };
 
+  const handleLogout = () => {
+    authService.logout();
+    window.location.href = '/login';
+  };
+
   const getStatusColor = (status: Booking['status']) => {
     switch (status) {
       case 'confirmed':
@@ -147,8 +154,8 @@ const OwnerDashboard: React.FC = () => {
         <IonToolbar color="primary">
           <IonTitle>Owner Dashboard</IonTitle>
           <IonButtons slot="end">
-            <IonHeaderButton onClick={handleProfile}>
-              <IonIcon icon={personCircleOutline} />
+            <IonHeaderButton onClick={handleLogout}>
+              <IonIcon icon={logOutOutline} />
             </IonHeaderButton>
           </IonButtons>
         </IonToolbar>
@@ -325,6 +332,7 @@ const OwnerDashboard: React.FC = () => {
           </div>
         </div>
       </IonContent>
+      <OwnerTabBar />
     </IonPage>
   );
 };

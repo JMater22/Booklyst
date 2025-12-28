@@ -14,12 +14,14 @@ import {
   IonRefresher,
   IonRefresherContent,
 } from '@ionic/react';
-import { optionsOutline, personCircleOutline } from 'ionicons/icons';
+import { personCircleOutline, logOutOutline, heartOutline } from 'ionicons/icons';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay, Pagination } from 'swiper/modules';
 import { Venue } from '../../types/venue.types';
 import { venueService } from '../../services/venueService';
+import { authService } from '../../services/authService';
 import VenueCard from '../../components/venue/VenueCard';
+import TabBar from '../../components/navigation/TabBar';
 
 import 'swiper/css';
 import 'swiper/css/pagination';
@@ -87,6 +89,15 @@ const Home: React.FC = () => {
     router.push('/profile');
   };
 
+  const handleFavoritesClick = () => {
+    router.push('/favorites');
+  };
+
+  const handleLogout = () => {
+    authService.logout();
+    window.location.href = '/login';
+  };
+
   const handleRefresh = (event: CustomEvent) => {
     loadVenues();
     setTimeout(() => {
@@ -100,8 +111,14 @@ const Home: React.FC = () => {
         <IonToolbar color="primary">
           <IonTitle>Discover Venues</IonTitle>
           <IonButtons slot="end">
+            <IonButton onClick={handleFavoritesClick}>
+              <IonIcon icon={heartOutline} />
+            </IonButton>
             <IonButton onClick={handleProfileClick}>
               <IonIcon icon={personCircleOutline} />
+            </IonButton>
+            <IonButton onClick={handleLogout}>
+              <IonIcon icon={logOutOutline} />
             </IonButton>
           </IonButtons>
         </IonToolbar>
@@ -219,6 +236,7 @@ const Home: React.FC = () => {
           </div>
         </div>
       </IonContent>
+      <TabBar />
     </IonPage>
   );
 };

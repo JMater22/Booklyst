@@ -13,10 +13,12 @@ import {
   IonButton,
   useIonRouter,
 } from '@ionic/react';
-import { heartOutline } from 'ionicons/icons';
+import { heartOutline, logOutOutline } from 'ionicons/icons';
 import { Venue } from '../../types/venue.types';
 import { venueService } from '../../services/venueService';
+import { authService } from '../../services/authService';
 import VenueCard from '../../components/venue/VenueCard';
+import TabBar from '../../components/navigation/TabBar';
 
 import './Favorites.css';
 
@@ -44,6 +46,11 @@ const Favorites: React.FC = () => {
     router.push(`/venue/${venueId}`);
   };
 
+  const handleLogout = () => {
+    authService.logout();
+    window.location.href = '/login';
+  };
+
   const renderEmptyState = () => (
     <div className="empty-state">
       <IonIcon icon={heartOutline} className="empty-icon" />
@@ -63,6 +70,11 @@ const Favorites: React.FC = () => {
             <IonBackButton defaultHref="/profile" />
           </IonButtons>
           <IonTitle>My Favorites</IonTitle>
+          <IonButtons slot="end">
+            <IonButton onClick={handleLogout}>
+              <IonIcon icon={logOutOutline} />
+            </IonButton>
+          </IonButtons>
         </IonToolbar>
       </IonHeader>
 
@@ -95,6 +107,7 @@ const Favorites: React.FC = () => {
           )}
         </div>
       </IonContent>
+      <TabBar />
     </IonPage>
   );
 };

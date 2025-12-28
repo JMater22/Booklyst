@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">booklyst</string>
+    <string name="title_activity_main">booklyst</string>
+    <string name="package_name">com.booklyst.app</string>
+    <string name="custom_url_scheme">com.booklyst.app</string>
+</resources>

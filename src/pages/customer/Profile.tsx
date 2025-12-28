@@ -23,6 +23,7 @@ import {
   notificationsOutline,
 } from 'ionicons/icons';
 import { authService } from '../../services/authService';
+import TabBar from '../../components/navigation/TabBar';
 import './Profile.css';
 
 const Profile: React.FC = () => {
@@ -37,7 +38,7 @@ const Profile: React.FC = () => {
       duration: 2000,
       color: 'success',
     });
-    router.push('/login', 'root');
+    window.location.href = '/login';
   };
 
   const handleMenuClick = (path: string) => {
@@ -125,6 +126,7 @@ const Profile: React.FC = () => {
           </div>
         </div>
       </IonContent>
+      <TabBar />
     </IonPage>
   );
 };

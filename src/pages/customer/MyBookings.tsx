@@ -15,6 +15,7 @@ import {
   IonChip,
   IonRefresher,
   IonRefresherContent,
+  IonButtons,
   useIonRouter,
   useIonToast,
   useIonAlert,
@@ -28,12 +29,14 @@ import {
   closeCircle,
   checkmarkCircle,
   hourglassOutline,
+  logOutOutline,
 } from 'ionicons/icons';
 import { Booking } from '../../types/booking.types';
 import { Venue } from '../../types/venue.types';
 import { bookingService } from '../../services/bookingService';
 import { venueService } from '../../services/venueService';
 import { authService } from '../../services/authService';
+import TabBar from '../../components/navigation/TabBar';
 
 import './MyBookings.css';
 
@@ -113,6 +116,11 @@ const MyBookings: React.FC = () => {
 
   const handleViewDetails = (bookingId: string) => {
     router.push(`/booking-details/${bookingId}`);
+  };
+
+  const handleLogout = () => {
+    authService.logout();
+    window.location.href = '/login';
   };
 
   const getStatusColor = (status: Booking['status']) => {
@@ -276,6 +284,11 @@ const MyBookings: React.FC = () => {
       <IonHeader>
         <IonToolbar color="primary">
           <IonTitle>My Bookings</IonTitle>
+          <IonButtons slot="end">
+            <IonButton onClick={handleLogout}>
+              <IonIcon icon={logOutOutline} />
+            </IonButton>
+          </IonButtons>
         </IonToolbar>
         <IonToolbar>
           <IonSegment
@@ -310,6 +323,7 @@ const MyBookings: React.FC = () => {
           )}
         </div>
       </IonContent>
+      <TabBar />
     </IonPage>
   );
 };

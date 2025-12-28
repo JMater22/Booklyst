@@ -1,6 +1,7 @@
 import { Venue } from '../types/venue.types';
 import mockVenuesData from '../data/mockVenues.json';
 import { storageService } from './storageService';
+import { bookingService } from './bookingService';
 
 export const venueService = {
   /**
@@ -148,5 +149,93 @@ export const venueService = {
     const favorites = storageService.get<string[]>('favorites') || [];
     const allVenues = this.getAllVenues();
     return allVenues.filter(venue => favorites.includes(venue.id));
+  },
+
+  /**
+   * Get all venues for a specific owner
+   */
+  getOwnerVenues(ownerId: string): Venue[] {
+    const allVenues = this.getAllVenues();
+    return allVenues
+      .filter(v => v.ownerId === ownerId)
+      .sort((a, b) => {
+        const dateA = new Date(a.createdAt || 0).getTime();
+        const dateB = new Date(b.createdAt || 0).getTime();
+        return dateB - dateA; // Newest first
+      });
+  },
+
+  /**
+   * Update venue (supports both user-created and mock venues)
+   */
+  updateVenue(venueId: string, updates: Partial<Venue>): Venue | null {
+    const userVenues = storageService.get<Venue[]>('userVenues') || [];
+    const venueIndex = userVenues.findIndex(v => v.id === venueId);
+
+    if (venueIndex !== -1) {
+      // Update existing user venue
+      userVenues[venueIndex] = { ...userVenues[venueIndex], ...updates };
+      storageService.set('userVenues', userVenues);
+      return userVenues[venueIndex];
+    } else {
+      // Check if it's a mock venue - create editable copy
+      const mockVenue = (mockVenuesData as Venue[]).find(v => v.id === venueId);
+      if (mockVenue) {
+        const updatedVenue = { ...mockVenue, ...updates };
+        userVenues.push(updatedVenue);
+        storageService.set('userVenues', userVenues);
+        return updatedVenue;
+      }
+    }
+
+    return null;
+  },
+
+  /**
+   * Delete venue (only user-created venues)
+   */
+  deleteVenue(venueId: string): boolean {
+    const userVenues = storageService.get<Venue[]>('userVenues') || [];
+    const filtered = userVenues.filter(v => v.id !== venueId);
+
+    if (filtered.length < userVenues.length) {
+      storageService.set('userVenues', filtered);
+      return true;
+    }
+
+    return false;
+  },
+
+  /**
+   * Check if venue can be deleted
+   */
+  canDeleteVenue(venueId: string): { canDelete: boolean; reason?: string } {
+    const bookings = bookingService.getVenueBookings(venueId);
+
+    if (bookings.length > 0) {
+      return {
+        canDelete: false,
+        reason: `This venue has ${bookings.length} existing booking(s) and cannot be deleted.`
+      };
+    }
+
+    const userVenues = storageService.get<Venue[]>('userVenues') || [];
+    const isUserVenue = userVenues.some(v => v.id === venueId);
+
+    if (!isUserVenue) {
+      return {
+        canDelete: false,
+        reason: 'System venues cannot be deleted.'
+      };
+    }
+
+    return { canDelete: true };
+  },
+
+  /**
+   * Update venue images
+   */
+  updateVenueImages(venueId: string, images: string[], coverImage: string): Venue | null {
+    return this.updateVenue(venueId, { images, coverImage });
   }
 };

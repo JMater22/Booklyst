@@ -1,0 +1,252 @@
+.booking-details-content {
+  --background: #f5f5f5;
+}
+
+.booking-details-container {
+  padding: 16px;
+  max-width: 800px;
+  margin: 0 auto;
+  padding-bottom: 32px;
+}
+
+.status-card {
+  margin: 0 0 16px 0;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.status-header {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  align-items: center;
+  text-align: center;
+}
+
+.status-chip-large {
+  font-size: 16px;
+  font-weight: 700;
+  padding: 12px 24px;
+  height: auto;
+}
+
+.status-chip-large ion-icon {
+  font-size: 24px;
+}
+
+.booking-reference {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.booking-reference .label {
+  font-size: 14px;
+  color: #6b7280;
+}
+
+.booking-reference .value {
+  font-size: 18px;
+  font-weight: 700;
+  color: #1f2937;
+  font-family: monospace;
+}
+
+.section-title {
+  font-size: 18px;
+  font-weight: 700;
+  color: #1f2937;
+  margin: 0 0 16px 0;
+  padding-bottom: 8px;
+  border-bottom: 2px solid #e5e7eb;
+}
+
+.venue-info {
+  margin-top: 12px;
+}
+
+.venue-info h3 {
+  font-size: 20px;
+  font-weight: 600;
+  color: var(--ion-color-primary);
+  margin: 0 0 8px 0;
+}
+
+.venue-detail {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #6b7280;
+  font-size: 14px;
+}
+
+.venue-detail ion-icon {
+  font-size: 18px;
+}
+
+.details-list {
+  background: transparent;
+  padding: 0;
+}
+
+.details-list ion-item {
+  --background: #f9fafb;
+  --border-radius: 8px;
+  --padding-start: 12px;
+  --padding-end: 12px;
+  margin-bottom: 12px;
+  border: 1px solid #e5e7eb;
+}
+
+.detail-label {
+  font-size: 12px;
+  color: #6b7280;
+  margin: 0 0 4px 0;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.detail-value {
+  font-size: 16px;
+  color: #1f2937;
+  margin: 0;
+  font-weight: 600;
+}
+
+.payment-breakdown {
+  margin-top: 12px;
+}
+
+.payment-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 0;
+  border-bottom: 1px solid #e5e7eb;
+  font-size: 15px;
+}
+
+.payment-row:last-of-type {
+  border-bottom: none;
+}
+
+.payment-row.deposit {
+  color: #059669;
+  font-weight: 500;
+}
+
+.payment-row.balance {
+  color: #dc2626;
+  font-weight: 600;
+  font-size: 16px;
+}
+
+.payment-row .amount {
+  font-weight: 700;
+  font-size: 17px;
+}
+
+.payment-status {
+  margin-top: 16px;
+  text-align: center;
+}
+
+.payment-status ion-chip {
+  font-size: 14px;
+  font-weight: 600;
+  padding: 8px 16px;
+  height: auto;
+}
+
+.special-requests {
+  color: #4b5563;
+  font-size: 15px;
+  line-height: 1.6;
+  margin: 8px 0 0 0;
+  padding: 12px;
+  background: #f9fafb;
+  border-radius: 8px;
+  border-left: 4px solid var(--ion-color-primary);
+}
+
+.cancellation-card {
+  border: 2px solid #ef4444;
+  background: #fef2f2;
+}
+
+.cancellation-reason {
+  color: #991b1b;
+  font-size: 15px;
+  margin: 8px 0;
+  padding: 12px;
+  background: white;
+  border-radius: 6px;
+}
+
+.cancellation-date {
+  color: #6b7280;
+  font-size: 13px;
+  margin: 8px 0 0 0;
+  text-align: right;
+}
+
+.booking-actions {
+  margin-top: 24px;
+}
+
+.booking-actions ion-button {
+  height: 48px;
+  font-weight: 600;
+  font-size: 16px;
+}
+
+.booking-info {
+  margin-top: 16px;
+  padding: 16px;
+  background: #fffbeb;
+  border-radius: 8px;
+  border: 1px solid #fbbf24;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.booking-info ion-icon {
+  font-size: 24px;
+  flex-shrink: 0;
+}
+
+.booking-info p {
+  margin: 0;
+  color: #92400e;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+/* Responsive */
+@media (max-width: 576px) {
+  .booking-details-container {
+    padding: 12px;
+  }
+
+  .status-chip-large {
+    font-size: 14px;
+    padding: 10px 20px;
+  }
+
+  .booking-reference .value {
+    font-size: 16px;
+  }
+
+  .detail-value {
+    font-size: 14px;
+  }
+
+  .payment-row {
+    font-size: 14px;
+  }
+
+  .payment-row .amount {
+    font-size: 15px;
+  }
+}

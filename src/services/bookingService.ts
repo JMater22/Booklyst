@@ -21,7 +21,7 @@ export const bookingService = {
   /**
    * Create new booking
    */
-  createBooking(bookingData: Omit<Booking, 'id' | 'createdAt'>): Booking {
+  createBooking(bookingData: Omit<Booking, 'id' | 'createdAt' | 'reference'>): Booking {
     const allBookings = storageService.get<Booking[]>('bookings') || [];
 
     const newBooking: Booking = {
